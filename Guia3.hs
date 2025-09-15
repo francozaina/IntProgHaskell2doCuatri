@@ -120,3 +120,11 @@ todosMenores :: (Integer,Integer,Integer) -> Bool
 todosMenores (a,b,c)
     | funcionf a > funciong a && funcionf b > funciong b && funcionf c > funciong c = True
     | otherwise = False
+
+bisiesto :: Integer -> Bool
+bisiesto x
+    |mod x 4 == 0 || mod x 100 == 0 = True
+    |otherwise = False
+
+distanciaManhattan :: (Integer,Integer,Integer) -> (Integer,Integer,Integer) -> Integer
+distanciaManhattan (a,b,c) (x,y,z) = absoluto (a - x + b - y + c - z)
